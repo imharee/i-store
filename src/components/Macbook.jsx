@@ -38,8 +38,8 @@ Choose your new MacBook Air.
         <div className='w-80 h-64 2xl:mb-0 -mb-8'>
         <img
 src={currentColor.img}
-alt={`Mackbook Air With ${currentMb.chip}`}
-className="2xl:w-72 xl:w-52 w-48 h-full 2xl:mt-0 sm:-mt-6
+alt={`Macbook Air With ${currentMb.chip}`}
+className="2xl:w-72 xl:w-52 w-48 h-full 2xl:mt-0 sm:-mt-5
 object-contain m-auto "/>
  </div>
 <span className="2xl: text-lg xl:text-sm font-medium text-gray-800

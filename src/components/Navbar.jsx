@@ -4,7 +4,7 @@ import{navItems} from '../data/index'
 const Navbar = ({activePage, handleNavClick, isNavbarOpen, toggleNavbar}) => {
   return (
    <>
-    <div className={`2xl:w-80 xl:w-52 w-44 h-full bg-[#f8f8f8] flex flex-col justify-between
+    <div className={`2xl:w-80 xl:w-52 w-44 p-4 h-full bg-[#f8f8f8] flex flex-col justify-between
     pt-5 pl-6 pb-14 md:pb-0 absolute md:relative z-10 transition-transform duration-300 ${isNavbarOpen
       ? 'translate-x-0': '-translate-x-110 md:translate-x-0'
     }`}>
@@ -17,8 +17,8 @@ const Navbar = ({activePage, handleNavClick, isNavbarOpen, toggleNavbar}) => {
                 <a key={index} href="#" className="xl:w-36 lg:w-32 flex items-center justify-between my-3.5 text-left cursor-pointer"
                 onClick={()=> handleNavClick(index)}>
                   
-                <i className={`${item.icon}bx bx-home-alt-2 text-xl text-pink-400`}></i>
-    <span className="text-sm _text-gray-500 mr-auto mx-2.5 tracking-wider">{item.label}</span>
+                <i className={`${item.icon} text-xl text-pink-400`}></i>
+    <span className="text-sm _text-gray-500 mr-auto mx-4.5 tracking-wider">{item.label}</span>
     <i className={`text-lg text-yellow-400 ${
       activePage=== index ? item.activeIcon : item.inactiveIcon
     }`}></i>
@@ -41,10 +41,11 @@ const Navbar = ({activePage, handleNavClick, isNavbarOpen, toggleNavbar}) => {
 </a>
 </div>
     </div>
-   <button className='fixed md:hidden bottom-4 left-4 p-2text-4xl
+   <button className='fixed md:hidden bottom-4 left-4 p-2 text-3xl
    text-blue-400 z-30' onClick={toggleNavbar}>
     
-    <i className='bx bx-menu'></i>
+     {isNavbarOpen ?   <i className='bx bx-x'></i> :   <i className='bx bx-menu'>
+      </i>}
    </button>
    </>
   )

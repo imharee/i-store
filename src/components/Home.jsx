@@ -9,7 +9,7 @@ const Home = ({onNavigate}) => {
             <div key={index} className='flex flex-col flex-grow justify-around items-center bg-white hover:opacity-86' 
             onClick={()=> onNavigate(item.pageIndex)}>
             <span className='text-xl font-bold bg-gradient-to-b from-red-500
-            to-yellow-300 bg-clip-text text-transparent tracking-wide mb-16'>{item.label}</span>
+            to-yellow-300 bg-clip-text text-transparent tracking-wide mb-1'>{item.label}</span>
             <img src={item.img} alt={item.label} className='max-w-[65%]
             max-h-[65%] object-contain draggable=false'/>
         </div>
