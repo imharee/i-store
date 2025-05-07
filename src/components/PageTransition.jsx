@@ -19,7 +19,7 @@ const PageTransition = ({activePage, children}) => {
     >
 
         <div className={`absolute w-full h-full transition-transform duration-400
-            ${transitioning ? '-translate-y-full':'translate-y-0'}`}
+            ${transitioning ? '-translate-x-full':'translate-x-0'}`}
             >
             {children[currentPage]}
             </div>
